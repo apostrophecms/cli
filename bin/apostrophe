@@ -16,7 +16,7 @@ async function execute () {
 
   require('../lib/commands/create')(program);
   require('../lib/commands/create-module')(program, versionInfo.core);
-  require('../lib/commands/create-piece')(program);
+  require('../lib/commands/create-piece')(program, versionInfo.core);
   require('../lib/commands/create-widget')(program);
 
   await confUtils.checkConf();
