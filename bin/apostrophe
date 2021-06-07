@@ -14,9 +14,9 @@ async function execute () {
   util.checkDependencies();
 
   require('../lib/commands/create')(program);
-  require('../lib/commands/create-widget')(program);
-  require('../lib/commands/create-piece')(program);
   require('../lib/commands/create-module')(program);
+  require('../lib/commands/create-piece')(program);
+  require('../lib/commands/create-widget')(program);
 
   await confUtils.checkConf();
 
@@ -38,11 +38,11 @@ function getVersionInfo() {
 
   let output = `Apostrophe CLI: v${module.exports.version}\n`;
 
-  const aposPath = `${cwd}/node_modules/apostrophe/`;
+  const aposPath = `${cwd}/node_modules/apostrophe`;
 
   // Append the installed Apostrophe version, if in an active project.
   if (fs.existsSync(aposPath)) {
-    const aposPkg = require(`${aposPath}package.json`);
+    const aposPkg = require(`${aposPath}/package.json`);
 
     output += `Apostrophe v${aposPkg.version} is installed in this project.`;
   }
