@@ -8,13 +8,14 @@ const confUtils = require('../lib/conf-utils');
 const fs = require('fs');
 
 async function execute () {
-  program.version(getVersionInfo());
+  const versionInfo = getVersionInfo();
+  program.version(versionInfo.message);
 
   // Check for required shell dependencies.
   util.checkDependencies();
 
   require('../lib/commands/create')(program);
-  require('../lib/commands/create-module')(program);
+  require('../lib/commands/create-module')(program, versionInfo.core);
   require('../lib/commands/create-piece')(program);
   require('../lib/commands/create-widget')(program);
 
@@ -35,8 +36,9 @@ execute();
 function getVersionInfo() {
   require('pkginfo')(module, 'version');
   const cwd = process.cwd();
-
-  let output = `Apostrophe CLI: v${module.exports.version}\n`;
+  const response = {};
+  response.cli = module.exports.version;
+  response.message = `Apostrophe CLI: v${response.cli}\n`;
 
   const aposPath = `${cwd}/node_modules/apostrophe`;
 
@@ -44,8 +46,9 @@ function getVersionInfo() {
   if (fs.existsSync(aposPath)) {
     const aposPkg = require(`${aposPath}/package.json`);
 
-    output += `Apostrophe v${aposPkg.version} is installed in this project.`;
+    response.core = aposPkg.version;
+    response.message += `Apostrophe v${response.core} is installed in this project.`;
   }
 
-  return output;
+  return response;
 }
