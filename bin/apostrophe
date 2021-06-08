@@ -1,0 +1,63 @@
+#!/usr/bin/env node
+
+require('shelljs/global');
+require('colors');
+const { program } = require('commander');
+const util = require('../lib/util');
+const confUtils = require('../lib/conf-utils');
+const fs = require('fs');
+
+async function execute () {
+  program.version(getVersion());
+
+  // Get version of apostrophe-cli and apostrophe.
+  function getVersion() {
+    require('pkginfo')(module, 'version');
+    const cwd = process.cwd();
+
+    let output = 'apostrophe-cli: v' + module.exports.version + '\n';
+    const aposPath = cwd + '/node_modules/apostrophe/';
+
+    // Append message for apostrophe.
+    if (fs.existsSync(aposPath)) {
+      const aposPkg = require(aposPath + 'package.json');
+
+      output += 'apostrophe v' + aposPkg.version + ' is installed in this project.';
+    } else {
+      const request = require('sync-request');
+      const response = request('GET', 'https://raw.githubusercontent.com/apostrophecms/apostrophe-boilerplate/master/package.json');
+
+      if (response.statusCode === 200) {
+        const packageJSON = JSON.parse(response.body);
+
+        output += 'apostrophe ' + packageJSON.dependencies.apostrophe + ' will be installed with a new project, according to the dependencies of apostrophe-boilerplate.';
+      } else {
+        const execSync = require('child_process').execSync;
+        const aposVersion = execSync('npm view apostrophe version').toString();
+
+        output += 'apostrophe v' + aposVersion.trim() + ' (latest) will be installed with a new project, unless the boilerplate project\'s dependencies specify otherwise.';
+      }
+    }
+
+    return output;
+  }
+
+  util.checkDependencies();
+
+  require('../lib/commands/create')(program);
+  require('../lib/commands/create-widget')(program);
+  require('../lib/commands/create-piece')(program);
+  require('../lib/commands/create-module')(program);
+
+  await confUtils.checkConf();
+
+  program.parseAsync(process.argv);
+
+  if (process.argv.length <= 2) {
+    // This means user passed no args, so display help
+    // Needs to come after parse, or command name won't register in help text
+    program.help();
+  }
+}
+
+execute();
