@@ -25,13 +25,19 @@ To create a new project with the tool:
 apos create-project <shortname-without-spaces>
 ```
 
-This will create a local copy of our standard [Apostrophe Boilerplate](https://github.com/apostrophecms/apostrophe-boilerplate).
+This will create a local copy of the [Apostrophe 3 boilerplate](https://github.com/apostrophecms/a3-boilerplate).
 
 ### options
 
+#### `--a2`
+
+Use the `--a2` flag when creating an Apostrophe 2 project to use [the boilerplate](http://github.com/apostrophecms/apostrophe-boilerplate) for that version.
+
+#### `--boilerplate`
+
 Run `create-project` with a `--boilerplate` flag to start from a Github repository other than the standard `apostrophe-boilerplate` repo. For example, `apos create-project <shortname-without-spaces> --boilerplate=https://github.com/apostrophecms/apostrophe-open-museum.git` would create a project using the [Open Museum](https://github.com/apostrophecms/apostrophe-open-museum) demo.
 
-TODO: `--a2`
+#### `--setup`
 
 If you run the `create-project` command with the `--setup` flag, the command will also `npm install` the dependencies for the project and run `apostrophe-users:add` to create an admin user for the CMS, resulting in a fully bootstrapped project. This command will prompt you for a password for the admin user being created.
 
