@@ -4,10 +4,10 @@ The Apostrophe CLI is a cross-platform starting point for creating and configuri
 
 **Requires Node.js 8+**
 
-First, install `apostrophe-cli` as a global NPM module:
+First, install `@apostrophecms/cli` as a global NPM module:
 
 ```bash
-npm install -g apostrophe-cli
+npm install -g @apostrophecms/cli
 ```
 
 To view the available commands in a given context, execute the `apos` command with no arguments:
