@@ -1,6 +1,6 @@
 {
-  "name": "apostrophe-cli",
-  "version": "3.0.0",
+  "name": "@apostrophecms/cli",
+  "version": "1.0.0-beta",
   "description": "Commandline generator and configurator for Apostrophe CMS",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/apostrophecms/apostrophe-cli.git"
+    "url": "https://github.com/apostrophecms/cli.git"
   },
   "dependencies": {
     "colors": "^1.4.0",
