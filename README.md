@@ -33,9 +33,9 @@ This will create a local copy of the [Apostrophe 3 boilerplate](https://github.c
 
 Use the `--a2` flag when creating an Apostrophe 2 project to use [the boilerplate](http://github.com/apostrophecms/apostrophe-boilerplate) for that version.
 
-#### `--repo`
+#### `--starter`
 
-Run `create` with a `--repo` flag to start from a Github repository other than the standard `apostrophe-boilerplate` repo. For example, `apos create <shortname-without-spaces> --repo=https://github.com/apostrophecms/apostrophe-open-museum.git` would create a project using the [Open Museum](https://github.com/apostrophecms/apostrophe-open-museum) demo.
+Run `create` with a `--starter` flag to start from a Github repository other than the standard starters. For example, `apos create <shortname-without-spaces> --starter=https://github.com/apostrophecms/apostrophe-open-museum.git` would create a project using the [Open Museum](https://github.com/apostrophecms/apostrophe-open-museum) demo.
 
 ## Create a widget
 To bootstrap the necessary files and basic configuration for a new Apostrophe widget, run the following command from within your Apostrophe project's root directory:
@@ -70,10 +70,10 @@ apos add piece vegetables
 
 Then remember to register `'vegetables': {}` in `apps.js` above.
 
-If you run the `add piece` command with the `--page` flag, the command will also set up a corresponding pieces-pages module with your new piece type. Similarly, you can run the `add piece` command with the `--widget` flag, which will also set up a corresponding pieces-widgets module along with your new piece type. These flags can be used together or separately.
+If you run the `add piece` command with the `--page` flag, the command will also set up a corresponding piece-pages module with your new piece type. Similarly, you can run the `add piece` command with the `--widget` flag, which will also set up a corresponding piece-widgets module along with your new piece type. These flags can be used together or separately.
 
 ```bash
-apos add piece vegetable --pages --widgets
+apos add piece vegetable --page --widget
 ```
 
 ## Create an empty Apostrophe module
