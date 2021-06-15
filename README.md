@@ -68,12 +68,12 @@ To bootstrap the necessary files and basic configuration for a new Apostrophe pi
 apos add piece vegetables
 ```
 
-Then remember to register `'vegetables': {}` in `apps.js` above.
+Then remember to register `'vegetables': {}` in `app.js` above.
 
 If you run the `add piece` command with the `--page` flag, the command will also set up a corresponding piece-pages module with your new piece type. Similarly, you can run the `add piece` command with the `--widget` flag, which will also set up a corresponding piece-widgets module along with your new piece type. These flags can be used together or separately.
 
 ```bash
-apos add piece vegetable --page --widget
+apos add piece vegetables --page --widget
 ```
 
 ## Create an empty Apostrophe module
@@ -82,7 +82,7 @@ To bootstrap the necessary files and basic configuration for a brand-new Apostro
 apos add module <module name>
 ```
 
-Remember to register the module in `apps.js` with the other module types.
+Remember to register the module in `app.js` with the other module types.
 
 ---------------
 
