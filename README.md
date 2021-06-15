@@ -4,10 +4,10 @@ The Apostrophe CLI is a cross-platform starting point for creating and configuri
 
 **Requires Node.js 8+**
 
-First, install `apostrophe-cli` as a global NPM module:
+First, install `@apostrophecms/cli` as a global NPM module:
 
 ```bash
-npm install -g apostrophe-cli
+npm install -g @apostrophecms/cli
 ```
 
 To view the available commands in a given context, execute the `apos` command with no arguments:
@@ -22,22 +22,26 @@ apos
 
 To create a new project with the tool:
 ```bash
-apos create-project <shortname-without-spaces>
+apos create <shortname-without-spaces>
 ```
 
-This will create a local copy of our standard [Apostrophe Boilerplate](https://github.com/apostrophecms/apostrophe-boilerplate).
+This will create a local copy of the [Apostrophe 3 boilerplate](https://github.com/apostrophecms/a3-boilerplate).
 
 ### options
 
-Run `create-project` with a `--boilerplate` flag to start from a Github repository other than the standard `apostrophe-boilerplate` repo. For example, `apos create-project <shortname-without-spaces> --boilerplate=https://github.com/apostrophecms/apostrophe-open-museum.git` would create a project using the [Open Museum](https://github.com/apostrophecms/apostrophe-open-museum) demo.
+#### `--a2`
 
-If you run the `create-project` command with the `--setup` flag, the command will also `npm install` the dependencies for the project and run `apostrophe-users:add` to create an admin user for the CMS, resulting in a fully bootstrapped project. This command will prompt you for a password for the admin user being created.
+Use the `--a2` flag when creating an Apostrophe 2 project to use [the boilerplate](http://github.com/apostrophecms/apostrophe-boilerplate) for that version.
+
+#### `--starter`
+
+Run `create` with a `--starter` flag to start from a Github repository other than the standard starters. For example, `apos create <shortname-without-spaces> --starter=https://github.com/apostrophecms/apostrophe-open-museum.git` would create a project using the [Open Museum](https://github.com/apostrophecms/apostrophe-open-museum) demo.
 
 ## Create a widget
 To bootstrap the necessary files and basic configuration for a new Apostrophe widget, run the following command from within your Apostrophe project's root directory:
 ```bash
 # "-widgets" will automatically be appended to the end of your module name
-apos create-widget fancy-button
+apos add widget fancy-button
 ```
 
 **Note:** You will then need to register this widget module in `app.js` so it is available in your project code. The same is true for the commands below when you create a piece module or generic module.
@@ -54,28 +58,28 @@ module.exports = {
 Add a `--player` option to the command to include the client-side Javascript "player" boilerplate to the new widget module as well.
 
 ```bash
-apos create-widget tabs --player
+apos add widget tabs --player
 ```
 
 ## Create a piece
 To bootstrap the necessary files and basic configuration for a new Apostrophe piece type, run the following command from within your Apostrophe project's root directory:
 
 ```bash
-apos create-piece vegetables
+apos add piece vegetables
 ```
 
 Then remember to register `'vegetables': {}` in `apps.js` above.
 
-If you run the `create-piece` command with the `--pages` flag, the command will also set up a corresponding pieces-pages module with your new piece type. Similarly, you can run the `create-piece` command with the `--widgets` flag, which will also set up a corresponding pieces-widgets module along with your new piece type. These flags can be used together or separately.
+If you run the `add piece` command with the `--page` flag, the command will also set up a corresponding piece-pages module with your new piece type. Similarly, you can run the `add piece` command with the `--widget` flag, which will also set up a corresponding piece-widgets module along with your new piece type. These flags can be used together or separately.
 
 ```bash
-apos create-piece vegetable --pages --widgets
+apos add piece vegetable --page --widget
 ```
 
 ## Create an empty Apostrophe module
 To bootstrap the necessary files and basic configuration for a brand-new Apostrophe module that doesn't extend one of the usual suspects like pieces or widgets:
 ```bash
-apos create-module <module name>
+apos add module <module name>
 ```
 
 Remember to register the module in `apps.js` with the other module types.
