@@ -1,6 +1,6 @@
 # Changelog
 
-## 3.0.1 (2021-07-30)
+## 3.0.1 (2021-08-03)
 
 - Updates ESLint to v7 to meet the eslint-config-apostrophe peer dependency requirement.
 
