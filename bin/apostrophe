@@ -16,6 +16,7 @@ async function execute () {
 
   require('../lib/commands/create')(program);
   require('../lib/commands/add')(program, versionInfo.core);
+  require('../lib/commands/deploy')(program);
 
   await confUtils.checkConf();
 
