@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Adds
+
+- Adds a spinner indicator during package install to avoid the impression that the process is failing.
+
 ## 3.0.1 (2021-08-03)
 
 - Updates ESLint to v7 to meet the eslint-config-apostrophe peer dependency requirement.
