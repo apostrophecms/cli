@@ -19,6 +19,7 @@
     "common-tags": "^1.8.0",
     "conf": "^6.2.4",
     "lodash": "^4.17.20",
+    "ora": "^5.4.1",
     "package-json": "^6.5.0",
     "pkginfo": "^0.4.1",
     "prompts": "^2.3.2",
