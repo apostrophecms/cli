@@ -14,7 +14,7 @@
     "url": "https://github.com/apostrophecms/cli.git"
   },
   "dependencies": {
-    "colors": "^1.4.0",
+    "colors": "1.4.0",
     "commander": "^5.1.0",
     "common-tags": "^1.8.0",
     "conf": "^6.2.4",
