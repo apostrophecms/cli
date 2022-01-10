@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.1.1 (2022-01-10)
+
+### Fixes
+
+- Pinned `package.json` to version `1.4.0` of the `colors` module to ensure the [liberty bug](https://github.com/Marak/colors.js/issues/285) does not corrupt the display. This should not be possible when installing normally with `-g` since we were already shipping a `package-lock.json` that contains 1.4.0, however the bug did occur if a user cloned the repo and ran `npm update`, so in an abundance of caution we are making sure it is not possible even when doing so.
+
 ## 3.1.0 (2021-10-14)
 
 ### Adds
