@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 require('shelljs/global');
-require('colors');
 const { program } = require('commander');
 const util = require('../lib/util');
 const confUtils = require('../lib/conf-utils');
