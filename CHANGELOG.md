@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased 
+
+### Fixes 
+
+- Fixed typo in CLI help to clarify install options.
+
 ## 3.1.1 (2022-01-10)
 
 ### Fixes
