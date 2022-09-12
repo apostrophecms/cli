@@ -4,6 +4,7 @@
 
 ### Fixes 
 
+- Fixes apostrophe 3 paths in console output.
 - Fixed typo in CLI help to clarify install options.
 
 ## 3.1.1 (2022-01-10)
