@@ -35,7 +35,7 @@ Use the `--a2` flag when creating an Apostrophe 2 project to use [the boilerplat
 
 #### `--starter`
 
-Run `create` with a `--starter` flag to start from a Github repository other than the standard starters. For example, `apos create <shortname-without-spaces> --starter=https://github.com/apostrophecms/apostrophe-open-museum.git` would create a project using the [Open Museum](https://github.com/apostrophecms/apostrophe-open-museum) demo.
+Run `create` with a `--starter` flag to start from a Github repository other than the standard starters. For example, `apos create <shortname-without-spaces> --starter=https://github.com/apostrophecms/apostrophe-open-museum.git` would create a project using the [Open Museum](https://github.com/apostrophecms/apostrophe-open-museum) demo. The `--starter` flag also accepts shortened names for any of the [existing starter kits](https://github.com/orgs/apostrophecms/repositories?q=starter-kit&type=all) that consists of the name of the repo with the `starter-kit-` prefix removed. For example, `apos create <shortname-without-spaces> --starter=ecommerce` for the `starter-kit-ecommerce` repo. Finally, if you are using a personal or organizational repo, you can prefix your repo with it's location followed by the name to automatically add `https://github.com/`. For example, `apos create <shortname-without-spaces> --starter=mycoolcompany/my-starter`.
 
 ## Create a widget
 To bootstrap the necessary files and basic configuration for a new Apostrophe widget, run the following command from within your Apostrophe project's root directory:

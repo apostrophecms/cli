@@ -1,5 +1,12 @@
 # Changelog
 
+## UNRELEASED
+
+### Adds
+
+- Adds additional options to the `--starter` flag to make use of the starter kits easier. Also adds fallbacks for obtaining templates from other repositories.
+- Changes the `config.js` file to reflect the new name for the old `a3-boilerplate` template repo, `starter-kit-essentials`
+
 ## 3.1.2 (2022-09-15)
 
 ### Fixes 
