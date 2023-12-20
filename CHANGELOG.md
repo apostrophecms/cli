@@ -1,5 +1,11 @@
 # Changelog
 
+## UNRELEASED
+
+### Adds
+
+- Adds the `--uri` flag to pass a MongoDB server connection string allowing for initial user addition during project creation when a host server is being used.
+
 ## 3.2.0 (2023-08-03)
 
 ### Adds

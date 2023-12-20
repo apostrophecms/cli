@@ -37,6 +37,10 @@ Use the `--a2` flag when creating an Apostrophe 2 project to use [the boilerplat
 
 Run `create` with a `--starter` flag to start from a Github repository other than the standard starters. For example, `apos create <shortname-without-spaces> --starter=https://github.com/apostrophecms/apostrophe-open-museum.git` would create a project using the [Open Museum](https://github.com/apostrophecms/apostrophe-open-museum) demo. The `--starter` flag also accepts shortened names for any of the [existing starter kits](https://github.com/orgs/apostrophecms/repositories?q=starter-kit&type=all) that consists of the name of the repo with the `starter-kit-` prefix removed. For example, `apos create <shortname-without-spaces> --starter=ecommerce` for the `starter-kit-ecommerce` repo. Finally, if you are using a personal or organizational repo, you can prefix your repo with it's location followed by the name to automatically add `https://github.com/`. For example, `apos create <shortname-without-spaces> --starter=mycoolcompany/my-starter`.
 
+#### `--uri`
+If you are not using a locally hosted MongoDB server, you can provide a connection string with the `--uri` flag. For the standard Atlas connection string you will need to add quotes due to the query parameters. This **does not** add your connection string to the project, it only allows for the creation of an admin user during project creation. You will still need to pass a connection string through the `APOS_MONGODB_URI` environment variable when starting your project locally.
+
+
 ## Create a widget
 To bootstrap the necessary files and basic configuration for a new Apostrophe widget, run the following command from within your Apostrophe project's root directory:
 ```bash
