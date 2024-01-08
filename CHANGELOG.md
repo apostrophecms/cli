@@ -5,7 +5,6 @@
 ### Adds
 
 - Adds the `--mongodb-uri` flag to pass a MongoDB server connection string allowing for initial user addition during project creation when a host server is being used.
-- Creates an `.env` file with the MongoDb URI variable set if it is passed through the `--mongodb-uri` flag.
 
 ## 3.2.0 (2023-08-03)
 
