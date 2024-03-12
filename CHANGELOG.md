@@ -1,5 +1,18 @@
 # Changelog
 
+## 3.4.0 (2024-03-12)
+
+### Adds
+
+- Fully compatible with the new major version of Apostrophe (`4.0.0`).
+- Slight improvements to messaging and documentation.
+
+### Removes
+
+- Removed vestigial support for Apostrophe 2.x, which has passed its end of life date and should not be used,
+therefore its removal is not considered a major version change in the CLI. Of course, those who
+need to create new 2.x projects can fork existing projects without the use of the CLI.
+
 ## 3.3.0 (2024-01-25)
 
 ### Adds

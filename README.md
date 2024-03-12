@@ -25,13 +25,9 @@ To create a new project with the tool:
 apos create <shortname-without-spaces>
 ```
 
-This will create a local copy of the [Apostrophe 3 boilerplate](https://github.com/apostrophecms/a3-boilerplate).
+This will create a local copy of the [apostrophe essentials starter kit](https://github.com/apostrophecms/starter-kit-essentials).
 
 ### options
-
-#### `--a2`
-
-Use the `--a2` flag when creating an Apostrophe 2 project to use [the boilerplate](http://github.com/apostrophecms/apostrophe-boilerplate) for that version.
 
 #### `--starter`
 
