@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.5.0 (2025-01-02)
+
+### Adds
+
+- `add widget`, `add piece` and `add module` are compatible with our new ESM-based starter kits. commonjs starter kits can still be used.
+
 ## 3.4.0 (2024-03-12)
 
 ### Adds
