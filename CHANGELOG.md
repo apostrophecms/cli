@@ -1,5 +1,16 @@
 # Changelog
 
+## UNRELEASED
+
+### Adds
+
+- Support for hybrid ApostropheCMS + Astro projects in the `create` command. Projects with a `backend/` directory are automatically detected and handled appropriately.
+- Updated the default Astro starter example in the README to use `astro-public-demo`.
+
+### Fixes
+
+- The `add` command now displays an error when run inside a hybrid Astro project, as it is not currently supported in that context.
+
 ## 3.5.0 (2025-01-07)
 
 ### Adds
