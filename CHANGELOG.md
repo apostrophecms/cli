@@ -11,6 +11,10 @@
 
 - The `add` command now displays an error when run inside a hybrid Astro project, as it is not currently supported in that context.
 
+### Changes
+
+- The default starter kit is now `public-demo`
+
 ## 3.5.0 (2025-01-07)
 
 ### Adds
